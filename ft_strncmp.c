@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danielro <danielro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/29 13:35:43 by danielro          #+#    #+#             */
-/*   Updated: 2022/04/11 15:58:33 by danielro         ###   ########.fr       */
+/*   Created: 2022/04/11 17:01:09 by danielro          #+#    #+#             */
+/*   Updated: 2022/04/11 18:02:23 by danielro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <stdio.h>
 
-void	*ft_memset(void *b, int c, size_t len)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	char	*i;
+	unsigned int	a;
+	unsigned char	x;
+	unsigned char	y;
 
-	i = b;
-	while (len--)
-		*i++ = c;
-	return (b);
+	a = 0;
+	while (n > 0 && a <= n - 1)
+	{
+		x = s1[a];
+		y = s2[a];
+		if (x != y)
+			return (x - y);
+		a++;
+	}
+	return (0);
 }
