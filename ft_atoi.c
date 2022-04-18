@@ -1,25 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danielro <danielro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/30 11:39:45 by danielro          #+#    #+#             */
-/*   Updated: 2022/04/14 17:16:14 by danielro         ###   ########.fr       */
+/*   Created: 2022/04/17 18:18:58 by danielro          #+#    #+#             */
+/*   Updated: 2022/04/17 21:51:50 by danielro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+int	ft_atoi(const char *str)
 {
-	char		*i;
-	const char	*j;
+	const char	*i;
+	int			a;
+	int			b;
 
-	i = dst;
-	j = src;
-	while (n-- && (dst || src))
-		*i++ = *j++;
-	return (dst);
+	i = str;
+	a = 1;
+	b = 0;
+	while (*i == 32 || (*i >= 9 && *i <= 13))
+		i++;
+	if (*i == '+' || *i == '-')
+	{
+		if (*i == '-')
+			a *= -1;
+		i++;
+	}
+	while (*i >= '0' && *i <= '9')
+	{
+		b = b * 10 + (*i - '0');
+		i++;
+	}
+	b *= a;
+	return (b);
 }

@@ -6,7 +6,7 @@
 /*   By: danielro <danielro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 17:01:09 by danielro          #+#    #+#             */
-/*   Updated: 2022/04/11 18:02:23 by danielro         ###   ########.fr       */
+/*   Updated: 2022/04/15 18:01:08 by danielro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		y = s2[a];
 		if (x != y)
 			return (x - y);
+		else if (x == '\0' || y == '\0')
+			return (0);
 		a++;
 	}
 	return (0);

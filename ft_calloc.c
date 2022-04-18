@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danielro <danielro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/30 11:39:45 by danielro          #+#    #+#             */
-/*   Updated: 2022/04/14 17:16:14 by danielro         ###   ########.fr       */
+/*   Created: 2022/04/18 11:47:52 by danielro          #+#    #+#             */
+/*   Updated: 2022/04/18 13:58:56 by danielro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
-{
-	char		*i;
-	const char	*j;
+void	*ft_memset(char *b, int c, int len);
 
-	i = dst;
-	j = src;
-	while (n-- && (dst || src))
-		*i++ = *j++;
-	return (dst);
+void	*ft_calloc(size_t count, size_t size)
+{
+	unsigned int	a;
+	void			*b;
+
+	a = count * size;
+	b = malloc(a);
+	if (b == NULL)
+		return (NULL);
+	ft_memset(b, 0, a);
+	return (b);
 }
