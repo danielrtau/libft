@@ -1,23 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danielro <danielro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/29 12:27:26 by danielro          #+#    #+#             */
-/*   Updated: 2022/04/22 16:47:21 by danielro         ###   ########.fr       */
+/*   Created: 2022/05/08 11:40:12 by danielro          #+#    #+#             */
+/*   Updated: 2022/05/08 12:51:33 by danielro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-size_t	ft_strlen(const char *s)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int	n;
+	char			*a;
+	size_t			b;
+	unsigned int	c;
 
-	n = 0;
-	while (s[n])
-		n++;
-	return (n);
+	b = ft_strlen(s) + 1;
+	a = malloc(b * sizeof(char));
+	if (a == NULL)
+		return (NULL);
+	ft_strlcpy(a, s, b);
+	c = 0;
+	while (s[c])
+	{
+		a[c] = f(c, s[c]);
+		c++;
+	}
+	a[c] = '\0';
+	return (a);
 }

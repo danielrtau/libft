@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danielro <danielro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/29 12:27:26 by danielro          #+#    #+#             */
-/*   Updated: 2022/04/22 16:47:21 by danielro         ###   ########.fr       */
+/*   Created: 2022/05/08 13:20:14 by danielro          #+#    #+#             */
+/*   Updated: 2022/05/08 13:56:42 by danielro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
+#include <unistd.h>
 
-size_t	ft_strlen(const char *s)
+void	ft_putchar_fd(char c, int fd)
 {
-	int	n;
-
-	n = 0;
-	while (s[n])
-		n++;
-	return (n);
+	write(fd, &c, 1);
 }

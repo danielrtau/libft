@@ -1,4 +1,6 @@
-test.c
+.DS_Store
+test*.c
 a.out
 *.o
 *.a
+*.txt

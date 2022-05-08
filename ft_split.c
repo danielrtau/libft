@@ -1,23 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danielro <danielro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/29 12:27:26 by danielro          #+#    #+#             */
-/*   Updated: 2022/04/22 16:47:21 by danielro         ###   ########.fr       */
+/*   Created: 2022/04/29 14:41:51 by danielro          #+#    #+#             */
+/*   Updated: 2022/05/01 20:05:53 by danielro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-size_t	ft_strlen(const char *s)
+#include "libft.h"
+/*
+char	**ft_split(char const *s, char c)
 {
-	int	n;
+	int		a;
+	char	*b;
+	char	*c;
 
-	n = 0;
-	while (s[n])
-		n++;
-	return (n);
-}
+	a = 0;
+	b = s;
+	while (*b)
+	{
+		if (*b != c)
+			a++;
+		else
+		{
+			c = malloc(sizeof(char) * a);
+			c = ft_substr(s, 0, a);
+		}
+		b++;
+	}
+}*/
