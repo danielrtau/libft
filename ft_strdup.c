@@ -6,14 +6,11 @@
 /*   By: danielro <danielro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 12:39:21 by danielro          #+#    #+#             */
-/*   Updated: 2022/04/26 19:44:30 by danielro         ###   ########.fr       */
+/*   Updated: 2022/05/16 20:28:00 by danielro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-int		ft_strlen(const char *s);
-void	*ft_memmove(void *dst, const void *src, size_t len);
+#include "libft.h"
 
 char	*ft_strdup(const char *s1)
 {
