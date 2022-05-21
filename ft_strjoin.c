@@ -6,15 +6,11 @@
 /*   By: danielro <danielro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 09:10:28 by danielro          #+#    #+#             */
-/*   Updated: 2022/04/22 14:14:17 by danielro         ###   ########.fr       */
+/*   Updated: 2022/05/21 17:56:22 by danielro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
-int		ft_strlen(const char *s);
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
+#include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

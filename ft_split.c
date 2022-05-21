@@ -6,12 +6,11 @@
 /*   By: danielro <danielro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 14:41:51 by danielro          #+#    #+#             */
-/*   Updated: 2022/05/19 21:50:47 by danielro         ###   ########.fr       */
+/*   Updated: 2022/05/21 17:56:34 by danielro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 int		ft_count(const char *s, char c, int a);
 char	**ft_aux(char const *s, char c, int a, int f);
@@ -72,7 +71,7 @@ int	main(void)
 	int i = 0;
 	char **tab;
 		
-	tab = ft_split("hello!", ' ');
+	tab = ft_split("hello! hola como ", ' ');
 	
 	while (i < 8)
 	{

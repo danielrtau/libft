@@ -6,11 +6,11 @@
 /*   By: danielro <danielro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 10:53:35 by danielro          #+#    #+#             */
-/*   Updated: 2022/03/30 11:36:09 by danielro         ###   ########.fr       */
+/*   Updated: 2022/05/21 17:56:44 by danielro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 void	*ft_bzero(void *s, size_t n)
 {

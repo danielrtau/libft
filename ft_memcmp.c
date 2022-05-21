@@ -6,11 +6,11 @@
 /*   By: danielro <danielro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 20:09:42 by danielro          #+#    #+#             */
-/*   Updated: 2022/04/12 20:35:31 by danielro         ###   ########.fr       */
+/*   Updated: 2022/05/21 17:56:52 by danielro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

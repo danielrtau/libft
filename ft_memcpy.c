@@ -6,11 +6,11 @@
 /*   By: danielro <danielro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 11:39:45 by danielro          #+#    #+#             */
-/*   Updated: 2022/04/14 17:16:14 by danielro         ###   ########.fr       */
+/*   Updated: 2022/05/21 17:56:53 by danielro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {

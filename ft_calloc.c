@@ -6,13 +6,11 @@
 /*   By: danielro <danielro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 11:47:52 by danielro          #+#    #+#             */
-/*   Updated: 2022/04/18 13:58:56 by danielro         ###   ########.fr       */
+/*   Updated: 2022/05/21 17:56:42 by danielro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-void	*ft_memset(char *b, int c, int len);
+#include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)
 {

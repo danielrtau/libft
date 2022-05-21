@@ -6,7 +6,7 @@
 /*   By: danielro <danielro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 14:05:45 by danielro          #+#    #+#             */
-/*   Updated: 2022/05/10 13:40:49 by danielro         ###   ########.fr       */
+/*   Updated: 2022/05/21 17:47:30 by danielro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,21 +21,20 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (s)
 	{
 		c = ft_strlen(s);
-		if (start >= ft_strlen(s) || len <= 0)
+		if (start >= c || len <= 0)
 		{
-			a = (char *)malloc(1);
-			a[0] = '\0';
+			a = ft_calloc(1, sizeof(char));
 			return (a);
 		}
-		if (len > ft_strlen(s) && start < ft_strlen(s))
-			len = ft_strlen(s) - start;
-		a = malloc((len + 1) * sizeof(char));
+		if (len > c && start < c)
+			len = c - start;
+		a = ft_calloc(len + 1, sizeof(char));
 		if (a == NULL)
 			return (NULL);
 		if (start > c)
 			start = c;
 		b = s + start;
-		ft_strlcpy(a, b, len + 1);
+		ft_memmove(a, b, len);
 		return (a);
 	}
 	return ((char *)s);

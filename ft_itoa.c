@@ -6,12 +6,11 @@
 /*   By: danielro <danielro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 20:06:03 by danielro          #+#    #+#             */
-/*   Updated: 2022/05/10 13:36:35 by danielro         ###   ########.fr       */
+/*   Updated: 2022/05/21 17:56:48 by danielro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_itoa(int n)
 {

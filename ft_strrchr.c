@@ -6,11 +6,11 @@
 /*   By: danielro <danielro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/09 18:15:45 by danielro          #+#    #+#             */
-/*   Updated: 2022/04/11 16:59:56 by danielro         ###   ########.fr       */
+/*   Updated: 2022/05/21 17:56:31 by danielro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *s);
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

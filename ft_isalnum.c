@@ -6,12 +6,11 @@
 /*   By: danielro <danielro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 11:50:47 by danielro          #+#    #+#             */
-/*   Updated: 2022/04/04 12:55:27 by danielro         ###   ########.fr       */
+/*   Updated: 2022/05/21 17:56:46 by danielro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c);
-int	ft_isdigit(int c);
+#include "libft.h"
 
 int	ft_isalnum(int c)
 {
