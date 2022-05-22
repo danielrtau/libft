@@ -6,7 +6,7 @@
 /*   By: danielro <danielro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/09 18:15:45 by danielro          #+#    #+#             */
-/*   Updated: 2022/05/22 14:26:17 by danielro         ###   ########.fr       */
+/*   Updated: 2022/05/22 14:49:24 by danielro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int			a;
+	int	a;
 
 	a = ft_strlen(s);
 	s = s + a;
