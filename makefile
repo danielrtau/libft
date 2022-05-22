@@ -6,7 +6,7 @@
 #    By: danielro <danielro@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/04 13:03:21 by danielro          #+#    #+#              #
-#    Updated: 2022/05/16 20:46:50 by danielro         ###   ########.fr        #
+#    Updated: 2022/05/22 12:21:18 by danielro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,12 @@ SRCS = ft_isalnum.c ft_isascii.c ft_isprint.c ft_memset.c ft_strlcpy.c \
  ft_substr.c ft_strjoin.c ft_strtrim.c ft_strmapi.c ft_striteri.c ft_putchar_fd.c \
  ft_putstr_fd.c ft_putendl_fd.c ft_itoa.c ft_putnbr_fd.c ft_split.c
 
+SRCS_BONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
+			 ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
+			 ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
+
 OBJECTS = $(SRCS:.c=.o)
+OBJECTS_BONUS = $(SRCS_BONUS:.c=.o)
 
 CFLAGS = -Wall -Wextra -Werror
 
@@ -28,10 +33,13 @@ $(NAME): $(OBJECTS)
 	ar csr $(NAME) $(OBJECTS)
 
 $(OBJECTS): $(SRCS)
-	gcc $(CFLAGS) -c $(SRCS)
+	gcc $(CFLAGS) -c $(SRCS) $(SRCS_BONUS)
+
+bonus: $(OBJECTS) $(OBJECTS_BONUS)
+	ar csr $(NAME) $(OBJECTS) $(OBJECTS_BONUS)
 
 clean:
-	@rm -f $(OBJECTS)
+	@rm -f $(OBJECTS) $(OBJECTS_BONUS)
 
 fclean: clean
 	@rm -f $(NAME)
